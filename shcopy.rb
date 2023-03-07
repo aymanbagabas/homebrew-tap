@@ -5,12 +5,12 @@
 class Shcopy < Formula
   desc "Copy text to clipboard from anywhere using ANSI OSC 52 sequence"
   homepage "https://github.com/aymanbagabas/shcopy"
-  version "0.1.2"
+  version "0.1.3"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/aymanbagabas/shcopy/releases/download/v0.1.2/shcopy_0.1.2_Darwin_x86_64.tar.gz"
-      sha256 "a09b411301d1611bc9293e54df9da74632b5f4fbac72ade8df22c41d891b4d7a"
+      url "https://github.com/aymanbagabas/shcopy/releases/download/v0.1.3/shcopy_0.1.3_Darwin_x86_64.tar.gz"
+      sha256 "33164727984823c26c88539026916a6ae67d414f13f6fe205b7ed47e91b90154"
 
       def install
         bin.install "shcopy"
@@ -18,8 +18,8 @@ class Shcopy < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/aymanbagabas/shcopy/releases/download/v0.1.2/shcopy_0.1.2_Darwin_arm64.tar.gz"
-      sha256 "86f4fe41431bec5d48c494c699e56e2f5164990762090a117f31c0950ad8b9eb"
+      url "https://github.com/aymanbagabas/shcopy/releases/download/v0.1.3/shcopy_0.1.3_Darwin_arm64.tar.gz"
+      sha256 "0a7c61b1a7fb6c4a33a1c83c88f260130938f9c2c16808b3eaa77c02530c6e4f"
 
       def install
         bin.install "shcopy"
@@ -29,9 +29,9 @@ class Shcopy < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/aymanbagabas/shcopy/releases/download/v0.1.2/shcopy_0.1.2_linux_armv6.tar.gz"
-      sha256 "13b3a4979bcb852c18bcb7f598b79aa769d1c418d664ca66d75ae32ebaf97fff"
+    if Hardware::CPU.intel?
+      url "https://github.com/aymanbagabas/shcopy/releases/download/v0.1.3/shcopy_0.1.3_linux_x86_64.tar.gz"
+      sha256 "3d1337c4c78ee4cb1239e89b318b64d7a6b83b4bee6eacb5b45c148a588d9e61"
 
       def install
         bin.install "shcopy"
@@ -39,17 +39,8 @@ class Shcopy < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/aymanbagabas/shcopy/releases/download/v0.1.2/shcopy_0.1.2_linux_arm64.tar.gz"
-      sha256 "b03c1c239c4b96b6068c6a67fb40e8b2e58c5a61fda44d4601ce7820cf8eaa4a"
-
-      def install
-        bin.install "shcopy"
-        man1.install "manpages/shcopy.1.gz"
-      end
-    end
-    if Hardware::CPU.intel?
-      url "https://github.com/aymanbagabas/shcopy/releases/download/v0.1.2/shcopy_0.1.2_linux_x86_64.tar.gz"
-      sha256 "bd218e9bf43b99bf2b4b0aebe46418dbeaa4fc8bd9681eddec3ec86d12a7ea34"
+      url "https://github.com/aymanbagabas/shcopy/releases/download/v0.1.3/shcopy_0.1.3_linux_arm64.tar.gz"
+      sha256 "b12ecc3674fd0251832f1eceb5c84594ea6765df9a866519934fe107665d0e38"
 
       def install
         bin.install "shcopy"
