@@ -5,23 +5,23 @@
 class Drift < Formula
   desc "A standalone git diff pager for the terminal."
   homepage "https://github.com/aymanbagabas/drift"
-  version "0.0.5"
+  version "0.0.6"
   license "MIT"
 
   depends_on "git"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/aymanbagabas/drift/releases/download/v0.0.5/drift_0.0.5_darwin_amd64.tar.gz"
-      sha256 "23e219450b33c521a888d8dd4c172e8b3bc7b7594d07d29565831f536198aa33"
+      url "https://github.com/aymanbagabas/drift/releases/download/v0.0.6/drift_0.0.6_darwin_amd64.tar.gz"
+      sha256 "032eec826bb852e3a4c8c1d26707bd3f2779c4253b2df7d86454b274d9ee22e6"
 
       define_method(:install) do
         bin.install "drift"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/aymanbagabas/drift/releases/download/v0.0.5/drift_0.0.5_darwin_arm64.tar.gz"
-      sha256 "2c6518856ad50929d2b247281f12a63ba39dc5816239176b5ac6ca8e6c3ac78c"
+      url "https://github.com/aymanbagabas/drift/releases/download/v0.0.6/drift_0.0.6_darwin_arm64.tar.gz"
+      sha256 "dba9b05912f83b2aef2e6ad6223d2a05dd2c62b42941954f4874a1274dfe04a9"
 
       define_method(:install) do
         bin.install "drift"
@@ -31,15 +31,15 @@ class Drift < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/aymanbagabas/drift/releases/download/v0.0.5/drift_0.0.5_linux_amd64.tar.gz"
-      sha256 "140fb4e51344ea058db71349dff3e558a4fd40c57232da3005af96a249b7aff8"
+      url "https://github.com/aymanbagabas/drift/releases/download/v0.0.6/drift_0.0.6_linux_amd64.tar.gz"
+      sha256 "45dc09b227672c05927983e1e8f0f38d4165e5d0edc4701a0f317efba2da409b"
       define_method(:install) do
         bin.install "drift"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/aymanbagabas/drift/releases/download/v0.0.5/drift_0.0.5_linux_arm64.tar.gz"
-      sha256 "96af069d73a977a6ca50be7bdb95d0ff3d54d6eb5b13e956ffd579e119c39f91"
+      url "https://github.com/aymanbagabas/drift/releases/download/v0.0.6/drift_0.0.6_linux_arm64.tar.gz"
+      sha256 "0d43ee8a693581204cd591dc81c1b920c7d5ae4287e58cf38bb537e4c6a05fef"
       define_method(:install) do
         bin.install "drift"
       end
